@@ -116,20 +116,6 @@ class core extends PluginBase implements Listener, Cancellable{
             if($result === null){
                 return true;
             }
-            switch($result){
-                case 0:
-                    $player->sendPopup("§cImpossible de rediriger server non ouvert !");
-                break;
-
-                case 1:
-                    $player->sendPopup("§eRedirection...");
-                    $player->transfer("194.9.172.103", "19133");
-                break;
-
-                case 2:
-                    $player->sendPopup("§cImpossible de rediriger server non ouvert ...");
-                break;
-            }
             return true;
 
         });
