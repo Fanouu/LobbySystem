@@ -56,7 +56,7 @@ class core extends PluginBase implements Listener, Cancellable{
             $z = $setting->get("TPLocationZ");
             $world = $setting->get("TPLocationWorld");
 
-            $player->teleport(new Position($x, $y, $z, $player->getWorld()->getFolderName($world)));
+            $player->teleport(new Position($x, $y, $z, $player->getWorld($world)));
         }
 
     }
@@ -126,7 +126,7 @@ class core extends PluginBase implements Listener, Cancellable{
             
             if($exp[0] === "World"){
                 $world = explode(":", $exp[1]);
-                $player->teleport(new Position((int)$world[1], (int)$world[2], (int)$world[3], $player->getWorld()->getFolderName($world[0])));
+                $player->teleport(new Position((int)$world[1], (int)$world[2], (int)$world[3], $player->getWorld($world[0])));
             }
             return true;
 
