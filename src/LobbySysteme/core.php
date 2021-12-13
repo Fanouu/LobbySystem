@@ -24,7 +24,7 @@ use LobbySysteme\Forms\SimpleForm;
 class core extends PluginBase implements Listener, Cancellable{
     use CancellableTrait;
     
-    public static nav = [];
+    public static $nav = [];
 
     protected function onEnable(): void{
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
