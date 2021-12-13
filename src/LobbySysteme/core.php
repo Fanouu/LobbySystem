@@ -133,11 +133,9 @@ class core extends PluginBase implements Listener, Cancellable{
             return true;
 
         });
-        $form->setTitle($this->setting->getNested("MenuNav.MenuNavUi"));
-        $form->setContent("Choisissez une option! ");
-        $form->addButton("§l§6> §r§cHeldia Practice §r\n §6O§bu§6v§be§6r§bt");
-        $form->addButton("§l§6> §r§cFaction §r\n §20§c/§6150");
-        $form->addButton("§l§6> §r§cMinage §r\n §20§c/§6150");
+        $form->setTitle($this->setting->getNested("MenuNav.MenuUi.Title"));
+        $form->setContent($this->setting->getNested("MenuNav.MenuUi.Content"));
+        
         $player->sendForm($form);
     }
 
