@@ -123,6 +123,11 @@ class core extends PluginBase implements Listener, Cancellable{
                 $serv = explode(":", $exp[1]);
                 $player->transfer($serv[0], $serv[1]);
             }
+            
+            if($exp[0] === "World"){
+                $world = explode(":", $exp[1]);
+                $player->teleport();
+            }
             return true;
 
         });
