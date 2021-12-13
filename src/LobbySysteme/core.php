@@ -126,7 +126,7 @@ class core extends PluginBase implements Listener, Cancellable{
             
             if($exp[0] === "World"){
                 $world = explode(":", $exp[1]);
-                $player->teleport();
+                $player->teleport(new Position((int)$world[1], (int)$world[2], (int)$world[3], $player->getWorld()->getFolderName($world[0])));
             }
             return true;
 
