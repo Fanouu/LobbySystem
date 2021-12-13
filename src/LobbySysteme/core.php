@@ -124,9 +124,14 @@ class core extends PluginBase implements Listener, Cancellable{
         $form->setTitle($this->setting->getNested("MenuNav.MenuUi.Title"));
         $form->setContent($this->setting->getNested("MenuNav.MenuUi.Content"));
         $server = $this->setting->getNested("MenuNav.MenuUi.Server");
+        $numserv = 0;
         foreach($server as $serv => $server){
-            
-        }
+            $redirec = explode("|", $server);
+            $form->addButton($redirec[0]);
+            self::$nav[$numserv] = "Server|" . $redirec[1];
+            $numserv++;
+        } 
+        
         $player->sendForm($form);
     }
 
