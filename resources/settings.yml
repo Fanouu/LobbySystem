@@ -42,5 +42,5 @@ MenuNav:
       - "§6Server Skyblock|skyblock.serv.eu:19132"
       - "§2Kitmap|kitmap.serv.eu:19132"
     World:
-      - "Map Faction Zebi|mapfaction:0:50:0"
-      - "Map Skyblock|mapskyblock:0:50:0"
+      - "Map Faction Zebi|world:0:150:0"
+      - "Map Skyblock|world:0:50:0"
