@@ -23,6 +23,8 @@ use LobbySysteme\Forms\SimpleForm;
 
 class core extends PluginBase implements Listener, Cancellable{
     use CancellableTrait;
+    
+    public static nav = [];
 
     protected function onEnable(): void{
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
@@ -121,7 +123,10 @@ class core extends PluginBase implements Listener, Cancellable{
         });
         $form->setTitle($this->setting->getNested("MenuNav.MenuUi.Title"));
         $form->setContent($this->setting->getNested("MenuNav.MenuUi.Content"));
-        
+        $server = $this->setting->getNested("MenuNav.MenuUi.Server");
+        foreach($server as $serv => $server){
+            
+        }
         $player->sendForm($form);
     }
 
