@@ -47,8 +47,8 @@ class core extends PluginBase implements Listener, Cancellable{
         $player->getInventory()->clearAll();
 
         $item = ItemFactory::getInstance()->get(ItemIds::COMPASS);
-        $item->setCustomName("§e- §6Server§e -");
-        $player->getInventory()->setItem(4, $item);
+        $item->setCustomName($this->setting->getNested("MenuNav.CompassName"));
+        $player->getInventory()->setItem($this->setting->getNested("MenuNav.CompassCase"), $item);
 
         if($setting->get("TPLocationX") != "none" or($setting->get("TPLocationY") != "none" or($setting->get("TPLocationZ") != "none" or $setting->get("TPLocationWorld") != "none"))) {
             $x = $setting->get("TPLocationX");
