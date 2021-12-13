@@ -32,7 +32,8 @@ TPLocationZ: "none"
 TPLocationWorld: "none"
 
 MenuNav:
-  CompassCase: 
+  CompassCase: 4
+  CompassName: "§e- §6Server§e -"
   MenuUi:
     Title: "LobbySystem By Fanouu"
     Content: "Please choose options !"
