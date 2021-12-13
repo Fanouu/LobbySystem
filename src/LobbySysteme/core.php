@@ -118,6 +118,11 @@ class core extends PluginBase implements Listener, Cancellable{
             if($result === null){
                 return true;
             }
+            $exp = explode("|", self::$nav[$data]);
+            if($exp[0] === "Server"){
+                $serv = explode(":", $exp[1]);
+                $player->transfer($serv[0], $serv[1]);
+            }
             return true;
 
         });
